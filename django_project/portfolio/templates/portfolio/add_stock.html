@@ -16,7 +16,7 @@
         <h1>{{ stock.stock_ticker}}</h1>
         <h1>{{ stock.purchase_price}}</h1>
         <h1>{{ stock.number_of_shares}}</h1>
-        <p>From {{ stock.user.username }} on {{ stock.date }}</p>
+        <p>From {{ stock.user.username }} on {{ stock.created }}</p>
     {% endfor %}
 
 <!--trans history optional feature-->
