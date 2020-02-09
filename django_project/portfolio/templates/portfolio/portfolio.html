@@ -12,16 +12,16 @@
           <div class="p-2 border">Adj Close</div>
       </div>
     </br>
-    {% for message in messages %}
+    {% for stock in stocks %}
         <div class="d-flex text-black border">
-          <div class="p-2 border">Ticker</div>
-          <div class="p-2 border">Date</div>
-          <div class="p-2 border">Open</div>
-          <div class="p-2 border">high</div>
-          <div class="p-2 border">low</div>
-          <div class="p-2 border">Close</div>
-          <div class="p-2 border">Volume</div>
-          <div class="p-2 border">Adj Close</div>
+          <div class="p-2 border">{{ stock.stock_ticker }}</div>
+          <div class="p-2 border">{{ stock.purchase_price }}</div>
+          <div class="p-2 border">{{ stock.number_of_shares }}</div>
+          <div class="p-2 border">{{ stock.user }}</div>
+          <div class="p-2 border">{{ stock.created }}</div>
+          <div class="p-2 border">{{ stock.updated }}</div>
+          <div class="p-2 border">{{ stock.stock_ticker }}</div>
+          <div class="p-2 border">{{ stock.stock_ticker }}</div>
       </div>
     {% endfor %}
 
