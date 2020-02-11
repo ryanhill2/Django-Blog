@@ -10,12 +10,17 @@ from django.views.generic import (
 from .models import Post
 
 
-def home(request):
+def news_board(request):
     context = {
         'posts': Post.objects.all()
     }
-    return render(request, 'blog/home.html', context)
+    return render(request, 'blog/news_board.html', context)
 
+class NewsBoardView(ListView):
+    model = Post
+    template_name = 'blog/home.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
 
 class PostListView(ListView):
     model = Post
