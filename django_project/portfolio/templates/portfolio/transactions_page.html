@@ -1,18 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-      <div class="d-flex text-black border">
-          <div class="p-2 border">Ticker</div>
-          <div class="p-2 border">Date</div>
-          <div class="p-2 border">Open</div>
-          <div class="p-2 border">high</div>
-          <div class="p-2 border">low</div>
-          <div class="p-2 border">Close</div>
-          <div class="p-2 border">Volume</div>
-          <div class="p-2 border">Adj Close</div>
-      </div>
-    </br>
-    {% for stock in stocks %}
+ {% for stock in stocks %}
         <div class="d-flex text-black border">
           <div class="p-2 border">{{ stock.stock_ticker }}</div>
           <div class="p-2 border">{{ stock.purchase_price }}</div>
