@@ -13,4 +13,7 @@
           </div>
         </article>
     {% endfor %}
+
+    <a class="btn btn-outline-primary" href="{% url 'blog-home' %}">Return</a>
+    <a class="btn btn-outline-primary" href="{% url 'post-create' %}">Create Post</a>
 {% endblock content %}

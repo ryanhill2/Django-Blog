@@ -16,11 +16,13 @@ def news_board(request):
     }
     return render(request, 'blog/news_board.html', context)
 
+
 class NewsBoardView(ListView):
     model = Post
-    template_name = 'blog/home.html'
+    template_name = 'blog/news_board.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
+
 
 class PostListView(ListView):
     model = Post
@@ -31,7 +33,6 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
