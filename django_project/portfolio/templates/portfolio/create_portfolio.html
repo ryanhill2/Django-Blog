@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<h1>Create Portfolio</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit">HIT ME</button>
+        <a class="btn btn-outline-primary" href="{% url 'portfolio-portfolio' %}">Cancel</a>
+    </form>
+
+<!--    <h2>{{ text }}</h2>-->
+<!--    {% for stock in stocks %}-->
+<!--        <h1>{{ stock.stock_ticker}}</h1>-->
+<!--        <h1>{{ stock.purchase_price}}</h1>-->
+<!--        <h1>{{ stock.number_of_shares}}</h1>-->
+<!--        <p>From {{ stock.user.username }} on {{ stock.created }}</p>-->
+<!--    {% endfor %}-->
+
+<!--trans history optional feature-->
+
+    <h2>{{ text }}</h2>
+    {% for portfolio in portfolios %}
+        <h1>{{ portfolio.portfolio_name }}</h1>
+    {% endfor %}
+
+{% endblock content %}

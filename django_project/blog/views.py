@@ -37,6 +37,7 @@ class PostDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
+    success_url = '/news_board/'
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -60,7 +61,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = '/'
+    success_url = '/news_board/'
 
     def test_func(self):
         post = self.get_object()
