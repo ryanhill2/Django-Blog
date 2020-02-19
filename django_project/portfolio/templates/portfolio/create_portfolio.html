@@ -6,8 +6,8 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p}}
-        <button type="submit">HIT ME</button>
-        <a class="btn btn-outline-primary" href="{% url 'portfolio-portfolio' %}">Cancel</a>
+        <a class="btn btn-outline-danger" href="{% url 'portfolio-portfolio' %}">Return</a>
+        <button class="btn btn-outline-primary" type="submit">Create</button>
     </form>
 
 <!--    <h2>{{ text }}</h2>-->

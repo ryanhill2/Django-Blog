@@ -5,12 +5,11 @@ from .models import Stock, Portfolio
 
 class stockForm(forms.ModelForm):
     stock_ticker = forms.CharField(label='Stock Ticker')
-    purchase_price = forms.CharField(label='Purchase Price')
     number_of_shares = forms.CharField(label='Number of Shares')
 
     class Meta:
         model = Stock
-        fields = ('stock_ticker', 'purchase_price', 'number_of_shares',)
+        fields = ('stock_ticker', 'number_of_shares',)
 
 
 class portfolioForm(forms.ModelForm):
